@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خرید قطعات سخت‌افزاری کامپیوتر</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #d0f0e0;
+        }
+        .header {
+            background-color: #f4b41a;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .sub-header {
+            background-color: #007bff;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            font-size: 20px;
+            margin: 10px 20px;
+        }
+        form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input, form select, form button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        خرید قطعات سخت‌افزاری کامپیوتر
+    </div>
+    <div class="sub-header">
+        ثبت مشخصات کاربر
+    </div>
+    <form action="/submit" method="post">
+        <label for="name">نام:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">ایمیل:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>نوع خدمات مورد نظر:</label>
+        <input type="checkbox" id="repair" name="service" value="repair">
+        <label for="repair" style="display:inline;">تعمیر قطعه</label>
+        
+        <input type="checkbox" id="replace" name="service" value="replace">
+        <label for="replace" style="display:inline;">تعویض قطعه</label>
+        
+        <label for="part">انتخاب قطعه:</label>
+        <select id="part" name="part">
+            <option value="cpu">پردازنده</option>
+            <option value="gpu">کارت گرافیک</option>
+            <option value="ram">رم</option>
+            <option value="motherboard">مادربرد</option>
+        </select>
+
+        <label for="price">قیمت کالا (تومان):</label>
+        <input type="number" id="price" name="price" min="0" step="1000" placeholder="قیمت به تومان">
+
+        <label for="quantity">تعداد کالا:</label>
+        <input type="number" id="quantity" name="quantity" min="1" placeholder="تعداد موردنظر">
+
+        <button type="submit">ثبت اطلاعات</button>
+    </form>
+</body>
+</html>
